@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Management System</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Custom Styles -->
+</head>
+<body>
+
+<div class="container">
+    <header class="my-4">
+        <h1 class="text-center">Task Management System</h1>
+    </header>
+
+    <div id="projects" class="mb-5">
+        <h2>Projects</h2>
+        <div class="row" id="project-list">
+            <!-- Project cards will be inserted here -->
+        </div>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addProjectModal">Add Project</button>
+    </div>
+
+    <div id="tasks">
+        <h2>Tasks</h2>
+        <div class="row" id="task-list">
+            <!-- Task cards will be inserted here -->
+        </div>
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addTaskModal">Add Task</button>
+    </div>
+</div>
+
+<!-- Add Project Modal -->
+<div class="modal fade" id="addProjectModal" tabindex="-1" aria-labelledby="addProjectModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addProjectModalLabel">New Project</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="project-form">
+                    <div class="mb-3">
+                        <label for="projectName" class="form-label">Project Name</label>
+                        <input type="text" class="form-control" id="projectName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="projectDescription" class="form-label">Description</label>
+                        <textarea class="form-control" id="projectDescription"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="submit" form="project-form" class="btn btn-primary">Add Project</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Add Task Modal -->
+<div class="modal fade" id="addTaskModal" tabindex="-1" aria-labelledby="addTaskModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="addTaskModalLabel">New Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form id="task-form">
+                    <div class="mb-3">
+                        <label for "taskTitle" class "form-label">Task Title</label>
+                        <input type "text" class "form-control" id "taskTitle" required />
+                    </div>
+                    <div class "mb-3">
+                        <label for "taskDescription" class "form-label">Description</label>
+                        <textarea class "form-control" id "taskDescription"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class "modal-footer">
+                <button type "button" class "btn btn-secondary" data-bs-dismiss "modal">Close</button>
+                <button type "submit" form "task-form" class "btn btn-primary">Add Task</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src=https://code.jquery.com/jquery-3.6.0.min.js></script> 
+<script src=https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js></script> 
+<script src=https://maxcdn.bootstrapcdn.com/bootstrap/5.3.3/js/bootstrap.min.js></script> 
+<script src="./script.js"></script> <!-- Your custom script -->
+</body>
+</html>

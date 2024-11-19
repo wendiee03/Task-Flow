@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors());
 app.use(bodyParser.json());
-app.use(express.static(path.join(__dirname, '../client/task-management-app/build')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 // PostgreSQL connection setup
 const pool = new Pool({
@@ -192,7 +192,7 @@ app.delete('/tasks/:id', async (req, res) => {
 
 // The "catchall" handler: for any request that doesn't match one above,
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname + '/../client/task-management-app/build/index.html'));
+    res.sendFile(path.join(__dirname + '/../client/build/index.html'));
 });
 
 // Start the server

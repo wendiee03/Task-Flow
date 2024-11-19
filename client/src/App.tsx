@@ -2,6 +2,7 @@ import React from 'react';
 import ProjectList from './components/ProjectList';
 import TaskList from './components/TaskList';
 import Form from './components/Form';
+import TaskManager from './components/TaskManager';
 
 const App = () => {
   // Sample data for demonstration purposes
