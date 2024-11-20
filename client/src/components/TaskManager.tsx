@@ -2,7 +2,8 @@
 
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addTask, removeTask } from '/home/mukami/task-management-system/client/src/features/taskSlice';
+import { addTask, removeTask } from '../features/taskSlice';
+// '/home/mukami/task-management-system/client/src/features/taskSlice';
 
 const TaskManager = () => {
     const [title, setTitle] = useState('');
